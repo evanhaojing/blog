@@ -1,0 +1,146 @@
+{% extends 'base_main.html' %}
+
+{% block css %}
+<link href="/static/css/base.css" rel="stylesheet">
+<link href="/static/css/about.css" rel="stylesheet">
+<link href="/static/css/m.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block js %}
+{{ block.super }}
+<script src="/static/js/jquery.min.js" ></script>
+<script src="/static/js/ab.js"></script>
+<!--[if lt IE 9]>
+<script src="/static/js/modernizr.js"></script>
+<![endif]-->
+{% endblock %}
+
+
+{% block content %}
+<header class="header-navigation" id="header">
+  <nav>
+    <div class="logo"><a href="{% url 'blognoes:index' %}">Evan's Blog</a></div>
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <ul id="starlist">
+      <li><a href="{% url 'blognoes:index' %}">网站首页</a></li>
+      <li><a href="{% url 'blognoes:about' %}">关于我</a></li>
+      <li><a href="{% url 'blognoes:list' %}">爱生活</a></li>
+      <li class="menu"><a href="{% url 'blognoes:fengmian' %}">爱学习</a>
+        <ul class="sub">
+          <li><a href="#">慢生活</a></li>
+          <li><a href="#">美文欣赏</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="searchbox">
+      <div id="search_bar" class="search_bar">
+        <form  id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
+          <input class="input" placeholder="想搜点什么呢.." type="text" name="keyboard" id="keyboard">
+          <input type="hidden" name="show" value="title" />
+          <input type="hidden" name="tempid" value="1" />
+          <input type="hidden" name="tbname" value="news">
+          <input type="hidden" name="Submit" value="搜索" />
+          <p class="search_ico"> <span></span></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<article>
+  <div class="photowall">
+    <ul class="wall_a">
+      <li><a href="/"><img src="/static/images/1.jpg">
+        <figcaption>
+          <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">逃避自己的人，最终只能导致自己世界的崩塌，而变得越来越没有安全感。</a></p>
+      </li>
+      <li><a href="/"><img src="/static/images/3.jpg">
+        <figcaption>
+          <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">逃避自己的人，最终只能导致自己世界的崩塌，而变得越来越没有安全感。</a></p>
+      </li>
+      <li>
+        <p class="text_b"><a href="/">逃避自己的人，最终只能导致自己世界的崩塌，而变得越来越没有安全感。</a></p>
+      </li>
+      <li><a href="/"><img src="/static/images/5.jpg">
+        <figcaption>
+          <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">逃避自己的人，最终只能导致自己世界的崩塌，而变得越来越没有安全感。</a></p>
+      </li>
+      <li><a href="/"><img src="/static/images/6.jpg">
+        <figcaption>
+          <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
+        </figcaption>
+        </a></li>
+    </ul>
+  </div>
+  <div class="abox">
+  <h2>博主简介</h2>
+  <div class="biji-content" id="content"> Evan.jing，man，一个90后努力奋斗的小青年！一直潜心研究python后端开发技术，
+    一边工作一边积累经验，分享一些个人博客模板，以及开发等心得。
+  </div>
+  <div class="navlist">
+    <ul>
+      <li class="navcurrent"><a href="#top1">基本信息</a> </li>
+      <li> <a href="#top2" >工作技能</a> </li>
+      <li> <a href="#top3" >心路历程</a> </li>
+      <li> <a href="#top4" >我的博客</a> </li>
+      <li> <a href="#top5" >购买空间</a> </li>
+    </ul>
+  </div>
+  <div class="navtab">
+    <div class="navitem" style="display: block;" name = "top1">
+      <div class="content">
+        <p>网名：Evan | Evan.jing</p>
+        <p>职业：python开发 </p>
+                <p>邮箱：573171821@qq.com</p>
+        <p>个人微信：</p>
+        <p><img src=""></p>
+
+      </div>
+    </div>
+    <div class="navitem" name = "top2">
+      <div class="content">
+        <p class="ab_t">工作技能：</p>
+        <p>1、web前端页面的开发</p>
+        <p>2、根据产品需求，配合后端开发人员协作实现前端页面效果和功能</p>
+        <p>3、能够进行手机端和Pc端Html页面制作</p>
+        <p>4、熟练使用html5，CSS3，javascript，熟悉页面架构和布局</p>
+        <p>5、熟练使用Javascript框架</p>
+      </div>
+    </div>
+    <div class="navitem" name = "top3">
+      <div class="content">
+        <p class="ab_t"></p>
+      </div>
+    </div>
+    <div class="navitem" name = "top4">
+      <div class="content">
+        <p class="ab_t">我的博客：</p>
+
+        
+      </div>
+    </div>
+    <div class="navitem" name = "top5">
+      <div class="content">
+        <p class="ab_t">购买空间：</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</article>
+<footer>
+  <p>Design by <a href="http://www.yangqq.com" target="_blank">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
+</footer>
+<a href="#" class="cd-top">Top</a>
+{% endblock %}

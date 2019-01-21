@@ -1,0 +1,11 @@
+<ul>
+    <li><a href="{% url 'user:user_info' %}"
+           {% if activete == 'info' %} class="active" {% endif %}
+        >· 个人信息</a></li>
+    <li><a href="{% url 'order:user_order' %}"
+           {% if activete == 'order' %} class="active" {% endif %}
+        >· 全部订单</a></li>
+    <li><a href="{% url 'user:user_site' %}"
+           {% if activete == 'site' %} class="active" {% endif %}
+        >· 收货地址</a></li>
+</ul>
